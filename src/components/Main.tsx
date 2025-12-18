@@ -16,7 +16,7 @@ function Main() {
             <a href="https://github.com/mr-uyghur" target="_blank" rel="noreferrer"><GitHubIcon/></a>
             <a href="https://www.linkedin.com/in/ali-h-4370361b4/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
             {/* <a href="https://leetcode.com/u/AltairOmega/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faCode} size="lg" /></a> */}
-            <a href="https://leetcode.com/u/AltairOmega/" target="_blank" rel="noreferrer"><LeetCode/></a>
+            <a href="https://leetcode.com/u/mr-uyghur/" target="_blank" rel="noreferrer"><LeetCode/></a>
           </div>
           <h1>Ali Halmamat</h1>
           <p>Full Stack Engineer</p>
@@ -24,8 +24,8 @@ function Main() {
           <div className="mobile_social_icons">
             <a href="https://github.com/mr-uyghur" target="_blank" rel="noreferrer"><GitHubIcon/></a>
             <a href="https://www.linkedin.com/in/ali-h-4370361b4/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
-            {/* <a href="https://leetcode.com/u/AltairOmega/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faCode} size="lg" /></a> */}
-            <a href="https://leetcode.com/u/AltairOmega/" target="_blank" rel="noreferrer"><LeetCode/></a>
+            {/* <a href="https://leetcode.com/u/mr-uyghur/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faCode} size="lg" /></a> */}
+            <a href="https://leetcode.com/u/mr-uyghur/" target="_blank" rel="noreferrer"><LeetCode/></a>
           </div>
         </div>
       </div>
