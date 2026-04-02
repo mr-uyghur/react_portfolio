@@ -7,9 +7,9 @@ function Project() {
         <h1>Coming soon ...</h1>
         <div className="projects-grid">
             <div className="project">
-                <a href="https://www.filmate.club/" target="_blank" rel="noreferrer"><img src={mock10} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://www.filmate.club/" target="_blank" rel="noreferrer"><h2>Filmate AI</h2></a>
-                <p>Developed movie finder app with semantic search and sentiment analysis using OpenAI GPT-3.5 Turbo, Qdrant, React, and Flask.</p>
+                <a href="https://www.filmate.club/" target="_blank" rel="noreferrer"><img src="https://media.licdn.com/dms/image/v2/D5622AQGJK54bMKq53A/feedshare-shrink_2048_1536/B56Z1Mhl5OI8Ak-/0/1775105376858?e=1776902400&v=beta&t=MqoP7HSvpU4_VZBOFXkd9Ok2_cnf806SyXGZPn1E0Ig" className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="https://www.filmate.club/" target="_blank" rel="noreferrer"><h2>Civiq</h2></a>
+                <p>Civiq is an interactive web app for exploring U.S. Senators and House representatives on a live map, with ZIP-based lookup, congressional district overlays, voting records, and how-to-vote information. Built with React, TypeScript, Vite, Django,</p>
             </div>
             {/* <div className="project">
                 <a href="https://yujisatojr.itch.io/highspeedchase" target="_blank" rel="noreferrer"><img src={mock09} className="zoom" alt="thumbnail" width="100%"/></a>
