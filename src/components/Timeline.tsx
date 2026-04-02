@@ -1,5 +1,5 @@
 import '@fortawesome/free-regular-svg-icons';
-import { faBriefcase, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -43,18 +43,7 @@ function Timeline() {
               Solutions Engineer
             </p>
           </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2024 - 2026"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
-            icon={<FontAwesomeIcon icon={faGraduationCap} />}
-          >
-            <h3 className="vertical-timeline-element-title">San Jose State University</h3>
-            <h4 className="vertical-timeline-element-subtitle">San Jose, CA</h4>
-            <p>
-              BS - Software Engineering
-            </p>
-          </VerticalTimelineElement>
+    
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             date="2021 - 2024"
@@ -67,18 +56,7 @@ function Timeline() {
               Full-stack Development, API Development, User Experience
             </p>
           </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2022 - 2023"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
-            icon={<FontAwesomeIcon icon={faGraduationCap} />}
-          >
-            <h3 className="vertical-timeline-element-title">De Anza College</h3>
-            <h4 className="vertical-timeline-element-subtitle">Cupertino, CA</h4>
-            <p>
-              Computer Science, Automation, Data Governance, Statistical Analysis
-            </p>
-          </VerticalTimelineElement>
+
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             date="2017 - 2021"
@@ -89,18 +67,6 @@ function Timeline() {
             <h4 className="vertical-timeline-element-subtitle">San Jose, CA</h4>
             <p>
               Personal Banker, Customer Exprience
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2020 - 2021"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
-            icon={<FontAwesomeIcon icon={faGraduationCap} />}
-          >
-            <h3 className="vertical-timeline-element-title">Technology Education - Coding Dojo</h3>
-            <h4 className="vertical-timeline-element-subtitle">San Jose, CA</h4>
-            <p>
-              Full Stack Development 
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>
