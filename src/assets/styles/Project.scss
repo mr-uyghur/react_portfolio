@@ -127,6 +127,70 @@
   }
 }
 
+/* Tech chips */
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.tech-chip {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  background: rgba(124, 58, 237, 0.15);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* CTA buttons */
+.project-ctas {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.cta-btn {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.cta-primary {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
+  color: #fff !important;
+  -webkit-text-fill-color: #fff;
+  box-shadow: 0 4px 16px rgba(124, 58, 237, 0.3);
+
+  &:hover {
+    box-shadow: 0 6px 24px rgba(124, 58, 237, 0.5);
+  }
+}
+
+.cta-secondary {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.8) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.35);
+  }
+}
+
 /* Legacy .zoom fallback (if used directly on img) */
 .zoom {
   border-radius: var(--radius-md) var(--radius-md) 0 0;
@@ -174,6 +238,22 @@
   .project h2:hover {
     text-decoration: underline;
     color: var(--color-accent);
+  }
+
+  .tech-chip {
+    background: rgba(124, 58, 237, 0.08);
+    border-color: rgba(124, 58, 237, 0.2);
+    color: #1e1b4b;
+  }
+
+  .cta-secondary {
+    color: #1e1b4b !important;
+    -webkit-text-fill-color: #1e1b4b;
+    border-color: rgba(30, 27, 75, 0.25);
+
+    &:hover {
+      background: rgba(30, 27, 75, 0.06);
+    }
   }
 }
 

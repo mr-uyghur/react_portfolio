@@ -6,51 +6,68 @@ interface ProjectData {
   title: string;
   description: string;
   imageUrl: string;
-  projectUrl: string;
+  tech: string[];
+  liveUrl?: string;
+  githubUrl?: string;
 }
 
 const projects: ProjectData[] = [
   {
     title: "Civiq",
-    description: "Interactive web app for exploring U.S. Senators and House representatives on a live map, with ZIP-based lookup, congressional district overlays, voting records, and how-to-vote information. Built with React, TypeScript, Vite, and Django.",
+    description: "Interactive web app for exploring U.S. Senators and House representatives on a live map, with ZIP-based lookup, congressional district overlays, voting records, and how-to-vote information.",
     imageUrl: civiqGif,
-    projectUrl: "https://rep-map-lime.vercel.app/",
+    tech: ["React", "TypeScript", "Vite", "Django"],
+    liveUrl: "https://rep-map-lime.vercel.app/",
   },
   {
     title: "LeetCode Coach",
-    description: "LeetCode Coach is an AI-powered Socratic-tutor Chrome extension designed to guide users to solve coding problems without spoiling the answers. It functions as a native side panel on LeetCode, utilizing a progressive hint system, system-prompted anti-spoiler guards, collapsible reasoning (thinking) blocks, and direct code extraction from Monaco Editor. Built with React, TypeScript, Vite, Tailwind CSS, Zustand, and Manifest V3.",
+    description: "AI-powered Socratic-tutor Chrome extension that guides users to solve coding problems without spoiling answers. Runs as a native side panel on LeetCode with a progressive hint system and collapsible reasoning blocks.",
     imageUrl: leetCoachGif,
-    projectUrl: "https://github.com/mr-uyghur/Leet_Coach",
-  }
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "Zustand"],
+    githubUrl: "https://github.com/mr-uyghur/Leet_Coach",
+  },
 ];
 
 function Project() {
-    return (
+  return (
     <div className="projects-container" id="projects">
-        <h1>Personal Projects</h1>
-        <span className="section-divider" />
-        <div className="projects-grid">
-            {projects.map((project, index) => (
-              <div className="project" key={index}>
-                <a href={project.projectUrl} target="_blank" rel="noreferrer">
-                  <div className="project-image-wrapper">
-                    <img src={project.imageUrl} alt={project.title} />
-                    <div className="project-overlay">
-                      <span>View Project</span>
-                    </div>
-                  </div>
-                </a>
-                <div className="project-card-body">
-                  <a href={project.projectUrl} target="_blank" rel="noreferrer">
-                    <h2>{project.title}</h2>
-                  </a>
-                  <p>{project.description}</p>
-                </div>
+      <h1>Personal Projects</h1>
+      <span className="section-divider" />
+      <div className="projects-grid">
+        {projects.map((project, index) => (
+          <div className="project" key={index}>
+            <div className="project-image-wrapper">
+              <img src={project.imageUrl} alt={project.title} />
+              <div className="project-overlay">
+                <span>View Project</span>
               </div>
-            ))}
-        </div>
+            </div>
+            <div className="project-card-body">
+              <h2>{project.title}</h2>
+              <p>{project.description}</p>
+              <div className="project-tech">
+                {project.tech.map((t) => (
+                  <span className="tech-chip" key={t}>{t}</span>
+                ))}
+              </div>
+              <div className="project-ctas">
+                {project.liveUrl && (
+                  <a href={project.liveUrl} target="_blank" rel="noreferrer" className="cta-btn cta-primary">
+                    Live Demo
+                  </a>
+                )}
+                {project.githubUrl && (
+                  <a href={project.githubUrl} target="_blank" rel="noreferrer" className="cta-btn cta-secondary">
+                    GitHub
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
-    );
+  );
 }
 
 export default Project;

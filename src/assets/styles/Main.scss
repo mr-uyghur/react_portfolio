@@ -8,7 +8,7 @@
   align-items: center;
   width: 100%;
   padding: 0 10%;
-  min-height: 100vh;
+  min-height: 85vh;
   background-image: url("../images/bg-dark.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -149,8 +149,8 @@
     font-family: var(--font-body);
     font-size: 1.05rem;
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.6) !important;
-    -webkit-text-fill-color: rgba(255, 255, 255, 0.6);
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff;
     margin: 0 0 32px 0;
     max-width: 480px;
   }
