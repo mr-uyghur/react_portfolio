@@ -1,4 +1,6 @@
 import '../assets/styles/Project.scss';
+import civiqGif from '../assets/images/1775105376858.gif';
+import leetCoachGif from '../assets/images/Animation.gif';
 
 function Project() {
     return(
@@ -6,9 +8,14 @@ function Project() {
         <h1>Personal Projects</h1>
         <div className="projects-grid">
             <div className="project">
-                <a href="https://rep-map-lime.vercel.app/" target="_blank" rel="noreferrer"><img src="https://media.licdn.com/dms/image/v2/D5622AQGJK54bMKq53A/feedshare-shrink_2048_1536/B56Z1Mhl5OI8Ak-/0/1775105376858?e=1776902400&v=beta&t=MqoP7HSvpU4_VZBOFXkd9Ok2_cnf806SyXGZPn1E0Ig" className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="https://rep-map-lime.vercel.app/" target="_blank" rel="noreferrer"><img src={civiqGif} className="zoom" alt="thumbnail" width="100%"/></a>
                 <a href="https://rep-map-lime.vercel.app/" target="_blank" rel="noreferrer"><h2>Civiq</h2></a>
                 <p>Civiq is an interactive web app for exploring U.S. Senators and House representatives on a live map, with ZIP-based lookup, congressional district overlays, voting records, and how-to-vote information. Built with React, TypeScript, Vite, Django,</p>
+            </div>
+            <div className="project">
+                <a href="https://github.com/mr-uyghur/Leet_Coach" target="_blank" rel="noreferrer"><img src={leetCoachGif} className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="https://github.com/mr-uyghur/Leet_Coach" target="_blank" rel="noreferrer"><h2>LeetCode Coach</h2></a>
+                <p>LeetCode Coach is an AI-powered Socratic-tutor Chrome extension designed to guide users to solve coding problems without spoiling the answers. It functions as a native side panel on LeetCode, utilizing a progressive hint system, system-prompted anti-spoiler guards, collapsible reasoning (thinking) blocks, and direct code extraction from Monaco Editor. Built with React, TypeScript, Vite, Tailwind CSS, Zustand, and Manifest V3.</p>
             </div>
             {/* <div className="project">
                 <a href="https://yujisatojr.itch.io/highspeedchase" target="_blank" rel="noreferrer"><img src={mock09} className="zoom" alt="thumbnail" width="100%"/></a>
