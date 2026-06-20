@@ -1,15 +1,89 @@
+/* ===========================
+   Footer
+   =========================== */
 footer {
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
+  text-align: center;
+  padding: 40px var(--section-padding-x);
+  position: relative;
 
-    svg {
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(124, 58, 237, 0.3), transparent);
+  }
+
+  .footer-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 16px;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      transition: background var(--transition-base), border-color var(--transition-base), transform var(--transition-base);
+      cursor: pointer;
+
+      &:hover {
+        background: rgba(124, 58, 237, 0.2);
+        border-color: rgba(124, 58, 237, 0.45);
+        transform: translateY(-2px);
+      }
+
+      svg {
         width: 1.1em !important;
         height: 1.1em !important;
-        margin-right: 10px;
+        color: rgba(255, 255, 255, 0.7);
+        transition: color var(--transition-fast);
+      }
+
+      &:hover svg {
+        color: #fff;
+      }
+    }
+  }
+
+  .footer-copy {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.3);
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.3);
+    margin: 0;
+  }
+}
+
+/* Light Mode */
+.light-mode footer {
+  &::before {
+    background: linear-gradient(90deg, transparent, rgba(124, 58, 237, 0.2), transparent);
+  }
+
+  .footer-icons a {
+    background: rgba(124, 58, 237, 0.05);
+    border-color: rgba(124, 58, 237, 0.12);
+
+    svg {
+      color: #4f46e5;
     }
 
-    p {
-        font-size: 0.8em;
+    &:hover {
+      background: rgba(124, 58, 237, 0.1);
     }
+  }
+
+  .footer-copy {
+    color: var(--color-text-dark-muted);
+    -webkit-text-fill-color: var(--color-text-dark-muted);
+  }
 }

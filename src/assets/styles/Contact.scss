@@ -1,48 +1,183 @@
-.contact_wrapper svg {
-  font-size: 1em;
-  vertical-align: middle;
-  margin-right: 5px;
-}
-
-.contact-form {
-  padding-top: 20px;
-
-  button {
-    float: right;
-    background-color: white;
-    color: #050f0b;
-  }
-
-  button:hover {
-    background-color: #5000ca;
-    color: white;
-  }
-
-  fieldset {
-    background-color: white;
-  }
-}
-
-label {
-  font-size: 1.2rem;
-  font-family: 'DomaineDispNar-Medium', sans-serif;
-}
-
-.form-flex {
-  display: flex;
-  gap: 15px;
-  padding-bottom: 15px;
-}
-
-.form-flex .MuiFormControl-root {
+/* ===========================
+   Contact Section
+   =========================== */
+#contact {
   width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(124, 58, 237, 0.1) 0%, transparent 65%);
+    pointer-events: none;
+  }
 }
 
-form {
-  width: 100% !important;
+.contact_wrapper {
+  position: relative;
+  z-index: 2;
 }
 
-.body-form {
-  width: 100% !important;
-  margin-bottom: 15px !important;
+.contact_wrapper h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 0.2em;
+  background: linear-gradient(135deg, #ffffff 0%, rgba(255,255,255,0.7) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.contact_wrapper .section-divider {
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-2));
+  border-radius: var(--radius-full);
+  margin-bottom: 2rem;
+}
+
+.contact_wrapper .contact-intro {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.58) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.58);
+  max-width: 520px;
+  margin-bottom: 2.5rem;
+}
+
+/* CTA Cards row */
+.contact-cta-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.contact-cta-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 28px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base), background var(--transition-base);
+  min-width: 220px;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 36px rgba(124, 58, 237, 0.2);
+    border-color: rgba(124, 58, 237, 0.4);
+    background: rgba(124, 58, 237, 0.1);
+  }
+
+  .cta-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
+    box-shadow: 0 4px 16px rgba(124, 58, 237, 0.35);
+
+    svg {
+      font-size: 1.3rem;
+      color: #fff;
+    }
+  }
+
+  .cta-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    .cta-label {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.45);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      -webkit-text-fill-color: rgba(255, 255, 255, 0.45);
+    }
+
+    .cta-value {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      -webkit-text-fill-color: #fff;
+    }
+  }
+}
+
+/* ===========================
+   Light Mode
+   =========================== */
+.light-mode {
+  #contact::before {
+    background: radial-gradient(circle, rgba(124, 58, 237, 0.06) 0%, transparent 65%);
+  }
+
+  .contact_wrapper h1 {
+    background: linear-gradient(135deg, #1e1b4b 0%, #4f46e5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .contact_wrapper .contact-intro {
+    color: var(--color-text-dark-muted) !important;
+    -webkit-text-fill-color: var(--color-text-dark-muted);
+  }
+
+  .contact-cta-card {
+    background: rgba(255, 255, 255, 0.75);
+    border-color: rgba(124, 58, 237, 0.12);
+    box-shadow: 0 2px 16px rgba(124, 58, 237, 0.06);
+
+    &:hover {
+      background: rgba(124, 58, 237, 0.06);
+      border-color: rgba(124, 58, 237, 0.3);
+      box-shadow: 0 10px 32px rgba(124, 58, 237, 0.12);
+    }
+
+    .cta-text {
+      .cta-label {
+        color: var(--color-text-dark-muted);
+        -webkit-text-fill-color: var(--color-text-dark-muted);
+      }
+
+      .cta-value {
+        color: #1e1b4b;
+        -webkit-text-fill-color: #1e1b4b;
+      }
+    }
+  }
+}
+
+/* ===========================
+   Responsive
+   =========================== */
+@media (max-width: 768px) {
+  .contact-cta-row {
+    flex-direction: column;
+  }
+
+  .contact-cta-card {
+    min-width: auto;
+    width: 100%;
+  }
 }

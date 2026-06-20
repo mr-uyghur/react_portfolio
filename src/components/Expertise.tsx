@@ -45,12 +45,12 @@ function Expertise() {
     <div className="container" id="expertise">
         <div className="skills-container">
             <h1>Expertise</h1>
+            <span className="section-divider" />
             <div className="skills-grid">
                 <div className="skill">
                     <FontAwesomeIcon icon={faReact} size="3x"/>
-                    
-                    <h3>Full Stack Web Development</h3>
-                    <p>I have built a diverse array of web applications from scratch using modern technologies such as React and Flask. I have a strong proficiency in the SDLC process and frontend + backend development.</p>
+                    <h3>Full Stack Development</h3>
+                    <p>Built diverse web applications from scratch using modern technologies like React and Django. Strong proficiency across the full SDLC — from architecture to deployment.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
                         {labelsFirst.map((label, index) => (
@@ -61,8 +61,8 @@ function Expertise() {
 
                 <div className="skill">
                     <FontAwesomeIcon icon={faDocker} size="3x"/>
-                    <h3>DevOps & Automation</h3>
-                    <p>Once the application is built, I help clients set up DevOps testing, CI/CD pipelines, and deployment automation to support the successful Go-Live.</p>
+                    <h3>DevOps &amp; Automation</h3>
+                    <p>Set up CI/CD pipelines, containerized environments, and deployment automation to support reliable Go-Live releases across cloud platforms.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
                         {labelsSecond.map((label, index) => (
@@ -73,8 +73,8 @@ function Expertise() {
 
                 <div className="skill">
                     <FontAwesomeIcon icon={faPython} size="3x"/>
-                    <h3>GenAI & LLM</h3>
-                    <p>Stay relevant in the market by leveraging the latest AI models in your projects. I have professional experience building enterprise grade GenAI-enabled solutions to empower intelligent decision making.</p>
+                    <h3>GenAI &amp; LLM Engineering</h3>
+                    <p>Professional experience building enterprise-grade GenAI solutions. Leverages the latest LLMs and vector databases to power intelligent decision-making.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
                         {labelsThird.map((label, index) => (

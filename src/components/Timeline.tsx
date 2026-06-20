@@ -1,8 +1,6 @@
 import '@fortawesome/free-regular-svg-icons';
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import '../assets/styles/Timeline.scss';
@@ -12,63 +10,53 @@ function Timeline() {
     <div id="history">
       <div className="items-container">
         <h1>Career History</h1>
+        <span className="section-divider" />
         <VerticalTimeline>
-          
-           <VerticalTimelineElement
+
+          <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
-            contentArrowStyle={{ borderRight: '7px solid  white' }}
-            date="2026 - present"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            date="2026 – present"
+            iconStyle={{ background: 'linear-gradient(135deg, #7c3aed, #4f46e5)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
             <h3 className="vertical-timeline-element-title">Google</h3>
             <h4 className="vertical-timeline-element-subtitle">Sunnyvale, CA</h4>
-            <p>
-              Solutions Engineer, Google Gemini
-            </p>
+            <p>Solutions Engineer, Google Gemini</p>
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
-            contentArrowStyle={{ borderRight: '7px solid  white' }}
-            date="2024 - 2026"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            date="2024 – 2026"
+            iconStyle={{ background: 'linear-gradient(135deg, #7c3aed, #4f46e5)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
             <h3 className="vertical-timeline-element-title">Star One Credit Union</h3>
             <h4 className="vertical-timeline-element-subtitle">Sunnyvale, CA</h4>
-            <p>
-              Solutions Engineer
-            </p>
-          </VerticalTimelineElement>
-    
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2021 - 2024"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
-            icon={<FontAwesomeIcon icon={faBriefcase} />}
-          >
-            <h3 className="vertical-timeline-element-title">Mobile Health Consumer</h3>
-            <h4 className="vertical-timeline-element-subtitle">Remote, US</h4>
-            <p>
-              Full-stack Development, API Development, User Experience
-            </p>
+            <p>Solutions Engineer</p>
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2017 - 2021"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            date="2021 – 2024"
+            iconStyle={{ background: 'linear-gradient(135deg, #7c3aed, #4f46e5)', color: '#fff' }}
+            icon={<FontAwesomeIcon icon={faBriefcase} />}
+          >
+            <h3 className="vertical-timeline-element-title">Mobile Health Consumer</h3>
+            <h4 className="vertical-timeline-element-subtitle">Remote, US</h4>
+            <p>Full-Stack Development · API Development · User Experience</p>
+          </VerticalTimelineElement>
+
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date="2017 – 2021"
+            iconStyle={{ background: 'linear-gradient(135deg, #7c3aed, #4f46e5)', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
             <h3 className="vertical-timeline-element-title">Wells Fargo Bank</h3>
             <h4 className="vertical-timeline-element-subtitle">San Jose, CA</h4>
-            <p>
-              Personal Banker, Customer Exprience
-            </p>
+            <p>Personal Banker · Customer Experience</p>
           </VerticalTimelineElement>
+
         </VerticalTimeline>
       </div>
     </div>

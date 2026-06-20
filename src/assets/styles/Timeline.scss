@@ -1,38 +1,166 @@
-.vertical-timeline span {
-    color: white;
-    font-family: 'Courier Prime', monospace;
+/* ===========================
+   Career History / Timeline
+   =========================== */
+#history {
+  width: 100%;
+  background: linear-gradient(180deg, transparent 0%, rgba(124, 58, 237, 0.04) 50%, transparent 100%);
 }
 
-.vertical-timeline p {
-    color: rgb(39, 40, 34);
+#history .items-container {
+  padding: var(--section-padding-y) var(--section-padding-x);
+
+  h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 0.2em;
+    background: linear-gradient(135deg, #ffffff 0%, rgba(255,255,255,0.7) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .section-divider {
+    display: block;
+    width: 48px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-accent), var(--color-accent-2));
+    border-radius: var(--radius-full);
+    margin-bottom: 2.5rem;
+  }
 }
 
-.vertical-timeline-element p {
-    color: rgb(39, 40, 34);
+/* Timeline line */
+.vertical-timeline::before {
+  background: linear-gradient(to bottom, var(--color-accent), var(--color-accent-2)) !important;
+  opacity: 0.35;
+  width: 3px !important;
 }
 
-.vertical-timeline-element h3 {
-    color: rgb(39, 40, 34);
-}
-
-.vertical-timeline-element h4 {
-    color: rgb(39, 40, 34);
-}
-
-.vertical-timeline-element span {
-    color: rgb(39, 40, 34);
-}
-
-.vertical-timeline-element .vertical-timeline-element-date {
-    color: white;
+/* Timeline icon */
+.vertical-timeline-element-icon {
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.25), 0 0 20px rgba(124, 58, 237, 0.2) !important;
 }
 
 .svg-inline--fa {
-    color: white;
+  color: white !important;
 }
 
-@media screen and (max-width: 1170px) {
-    .vertical-timeline-element .vertical-timeline-element-date {
-        color: rgb(39, 40, 34);
+/* Timeline content card */
+.vertical-timeline-element-content {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.09) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base) !important;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.35), 0 0 20px rgba(124, 58, 237, 0.12) !important;
+    border-color: rgba(124, 58, 237, 0.25) !important;
+  }
+}
+
+/* Arrow */
+.vertical-timeline-element-content-arrow {
+  border-right: 7px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Text inside card */
+.vertical-timeline-element h3.vertical-timeline-element-title {
+  font-family: var(--font-heading) !important;
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  margin-bottom: 4px !important;
+}
+
+.vertical-timeline-element h4.vertical-timeline-element-subtitle {
+  font-family: var(--font-body) !important;
+  font-size: 0.88rem !important;
+  font-weight: 400 !important;
+  color: var(--color-accent) !important;
+  opacity: 0.85;
+  margin-bottom: 10px !important;
+}
+
+.vertical-timeline-element p {
+  font-family: var(--font-body) !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+  color: rgba(255, 255, 255, 0.58) !important;
+}
+
+.vertical-timeline-element span.vertical-timeline-element-date {
+  font-family: var(--font-body) !important;
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  color: rgba(255, 255, 255, 0.45) !important;
+  letter-spacing: 0.02em;
+}
+
+/* ===========================
+   Light Mode Overrides
+   =========================== */
+.light-mode {
+  #history {
+    background: linear-gradient(180deg, transparent 0%, rgba(124, 58, 237, 0.03) 50%, transparent 100%);
+  }
+
+  #history .items-container h1 {
+    background: linear-gradient(135deg, #1e1b4b 0%, #4f46e5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .vertical-timeline-element-content {
+    background: rgba(255, 255, 255, 0.8) !important;
+    border-color: rgba(124, 58, 237, 0.1) !important;
+    box-shadow: 0 4px 24px rgba(124, 58, 237, 0.08) !important;
+
+    &:hover {
+      box-shadow: 0 8px 32px rgba(124, 58, 237, 0.14) !important;
+      border-color: rgba(124, 58, 237, 0.22) !important;
     }
+  }
+
+  .vertical-timeline-element-content-arrow {
+    border-right: 7px solid rgba(255, 255, 255, 0.8) !important;
+  }
+
+  .vertical-timeline-element h3.vertical-timeline-element-title {
+    color: #1e1b4b !important;
+  }
+
+  .vertical-timeline-element p {
+    color: var(--color-text-dark-muted) !important;
+  }
+
+  .vertical-timeline-element span.vertical-timeline-element-date {
+    color: var(--color-text-dark-muted) !important;
+  }
+}
+
+/* ===========================
+   Mobile
+   =========================== */
+@media screen and (max-width: 1170px) {
+  .vertical-timeline-element span.vertical-timeline-element-date {
+    color: rgba(255, 255, 255, 0.45) !important;
+    display: block;
+    margin-top: 6px;
+  }
+
+  .light-mode .vertical-timeline-element span.vertical-timeline-element-date {
+    color: var(--color-text-dark-muted) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #history .items-container {
+    padding: var(--section-padding-y) 5%;
+  }
 }
